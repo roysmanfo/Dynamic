@@ -88,5 +88,20 @@ nav button{border-radius: 5px;
     border-radius: 10px;
     width: calc(33% - 6rem);
     background: #fff;
+    opacity: 0;
+    height: 0;
+    transform: translateY(5rem);
 }
 .card h1{color: #4169e1;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+@keyframes card {
+    to {transform: translateY(0);opacity: 1;height: auto;}
+}
+.fade-in-anim:nth-child(1){
+    animation: card 750ms forwards ease-in-out;
+}
+.fade-in-anim:nth-child(3){
+    animation: card 750ms forwards 400ms ease-in-out;
+}
+.fade-in-anim:nth-child(2){
+    animation: card 750ms forwards 800ms ease-in-out;
+}
