@@ -21,7 +21,7 @@ nav{
 .logo{
     width: 10rem;
 }
-nav>div{display: flex;align-items: center;padding-inline: 1rem;}
+nav>div{display: flex;align-items: center;padding-inline: 2rem;}
 nav>div>ul{
     list-style: none;
     display: flex;

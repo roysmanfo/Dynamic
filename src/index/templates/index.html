@@ -1,28 +1,7 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellcome on Dynamic</title>
-    <link rel="stylesheet" href="{% static 'index/css/main.css' %}">
-</head>
-<body>
-    <nav>
-        <div>
-            <img src="{% static 'index/img/Dynamic_logo_A.png' %}" alt="Dynamic logo" class="logo">
-        <ul>
-            <li>How to start</li>
-            <li>Docs</li>
-            <li>Services</li>
-        </ul>
-        </div>
-        <div>
-            <button class="login">Login</button>
-            <button class="sign-in">Sign up</button>
-        </div>
-    </nav>
+
+{% block header %}
     <header class="hero">
         <div class="filter"></div>
         <img src="{% static 'index/img/hero_bg.jpg' %}" alt="colorfull background" class="bg">
@@ -36,12 +15,15 @@
             <!-- Here goes an image or a gif of a task being used -->
         </section>
     </header>
+{% endblock %}
+
+{% block main %}
     <main>
         <section class="card-container">
             <div class="card">
                 <h1>Create a space</h1>
                 <p>
-                    A space here on Dynamic is like a virtual room disigned to bee as comfortable 
+                    A space here on Dynamic is like a virtual room disigned to bee as comfortable
                     as possible for your needs.
                 </p>
             </div>
@@ -55,11 +37,10 @@
             <div class="card">
                 <h1>We are open-source</h1>
                 <p>
-                    If you want, you can check our source code and contribute if you found a bug or want 
+                    If you want, you can check our source code and contribute if you found a bug or want
                     to propose a feature.
                 </p>
             </div>
         </section>
     </main>
-</body>
-</html>
+{% endblock %}
