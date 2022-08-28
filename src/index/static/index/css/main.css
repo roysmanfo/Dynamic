@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
-
+/* General style rules */
 body,html{
     min-height: 100vh;
     margin: 0;
@@ -11,9 +11,11 @@ body{
 nav{
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 0 10px #aaa;
+    box-shadow: 0 0 10px #0004;
     position: fixed;
     width: 100vw;
+    background-color: #fffc;
+    backdrop-filter: blur(1px);
 }
 
 .logo{
@@ -43,11 +45,17 @@ nav button{border-radius: 5px;
 .sign-in{background: #89e4a2;color: #fff;}
 .sign-in:hover{background: #50d172;}
 
-
+/* Hero */
 
 .hero{
     height: 100vh;
     display: flex;
+}
+.hero .bg{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
 }
 .hero>section{
     width: 50%;
@@ -59,5 +67,19 @@ nav button{border-radius: 5px;
 
 .hero-caption h1{
     font-size: 50px;
-    color: #4169e1;
+    color: #fff;
 }
+.hero-caption p{line-height: 2;color: #222;}
+
+/* Cards */
+
+.card-container{display: flex;padding: 2rem;}
+.card{
+    box-shadow: 0 0 10px #999;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 10px;
+    width: calc(33% - 6rem);
+    background: #fff;
+}
+.card h1{color: #4169e1;font-family: system-ui;}
