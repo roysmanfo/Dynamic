@@ -1,1 +1,47 @@
-body{background-color: #222;min-height: 100vh;}
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body,html{
+    min-height: 100vh;
+    margin: 0;
+}
+body{
+    background-color: #fdfdfd;
+    font-family: 'Comfortaa', cursive;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 10px #aaa;
+    padding: 0 1rem;
+}
+
+.logo{
+    width: 10rem;
+}
+nav>div{display: flex;align-items: center;}
+nav>div>ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+nav>div>ul li{
+    padding: 0 1rem;
+    transition: 150ms;
+}
+nav>div>ul>li:hover{color: #89e4a2;cursor: pointer;}
+nav button{border-radius: 5px;border: none;padding: 1rem 2rem; margin-left: 1rem;font-family: 'Comfortaa', cursive;font-weight: 600;}
+.login{border: solid #4169e1 1px;background: #fff;color: #4169e1;}
+.sign-in{background: #89e4a2;color: #fff;}
+
+.task{
+    margin: 3rem;
+    padding: .5rem 3rem;
+    border: #aaa solid 1px;
+    border-radius: 10px;
+    background: #fff;
+    width: max-content;
+}
+
+.task .title{
+    color: #4169e1;
+}
