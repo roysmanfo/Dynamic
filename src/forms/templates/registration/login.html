@@ -8,6 +8,9 @@
 {% block content %}
 <h1>Login</h1>
     <form action="" method="post">
+        {% if user.is_authenticated %}
+            <h2>You are already logged as {{ user.username }}</h2><br>
+        {% endif %}
         {% csrf_token %}
         {{ form.as_p }}
         <p class="last-message" style="display: block;">If you don't have an account, just <a href="{% url 'forms:register' %}">sign in</a></p>
