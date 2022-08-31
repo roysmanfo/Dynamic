@@ -10,6 +10,7 @@
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
+        <p class="last-message" style="display: block;">Already have an account, login <a href="{% url 'forms:register' %}">here</a></p>
         <button>Login</button>
     </form>
 {% endblock %}

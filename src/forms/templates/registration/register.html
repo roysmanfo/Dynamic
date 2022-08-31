@@ -10,12 +10,12 @@
 {% endblock %}
 
 {% block content %}
-<h1>Register</h1>
+<h1>Sign In</h1>
 <form action="" method="post">
     
     {% csrf_token %}
     {{ form.as_p }}
-    <p class="last-message" style="display: block;">Already have an account, login <a href="{% url 'login' %}">here</a></p>
+    <p class="last-message" style="display: block;">Already have an account, login <a href="{% url 'forms:login' %}">here</a></p>
     <button>Register</button>
 </form>
 
