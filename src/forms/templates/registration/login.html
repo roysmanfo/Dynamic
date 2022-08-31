@@ -4,12 +4,17 @@
 {% block title %}
     <title>Login • Dynamic</title>
 {% endblock %}
+{% block style %}
+    <style>
+        .last-message{text-align: center;padding-top: 1rem;}
+    </style>
+{% endblock %}
 
 {% block content %}
 <h1>Login</h1>
     <form action="" method="post">
         {% if user.is_authenticated %}
-            <h2>You are already logged as {{ user.username }}</h2><br>
+            <h3 style="text-align: center;">You are already logged as {{ user.username }}</h3><br>
         {% endif %}
         {% csrf_token %}
         {{ form.as_p }}
