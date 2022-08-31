@@ -1,7 +1,7 @@
 from re import template
 from django.shortcuts import render
 from django.views import generic
-from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
+from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm, PasswordResetForm, SetPasswordForm
 from django.urls import reverse_lazy
 
 # Create your views here.
@@ -26,11 +26,23 @@ class PasswordChangeView(generic.CreateView):
 class PasswordChangeDoneView(generic.CreateView):
     template_name = 'registration/password_change_done.html'
 
-def password_changed(request):
-    return render(request, 'password_change.html')
+class PasswordResetView(generic.CreateView):
+    form_class = PasswordResetForm
+    template_name = 'registration/password_reset_form.html'
 
-def reset_password(request, user_id):
-    return render(request, 'reset_password.html')
+class PasswordResetDoneView(generic.CreateView):
+    template_name = 'registration/password_reset_done.html'
 
-# def sign_in(request):
-#     return render(request, 'sign_in.html')
+class PasswordResetConfirmView(generic.CreateView):
+    form_class = SetPasswordForm
+    post_reset_login = False
+    post_reset_login_backend = None
+    reset_url_token = "set-password"
+    success_url = reverse_lazy("password_reset_complete")
+    template_name = 'registration/password_reset_confirm.html'
+
+class PasswordResetCompleteView(generic.CreateView):
+    template_name = 'registration/password_reset_complete.html'
+
+
+
