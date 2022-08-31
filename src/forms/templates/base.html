@@ -6,9 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block title %}{% endblock %}
-    <link rel="stylesheet" href="{% static 'forms/main.css' %}">
+    <link rel="stylesheet" href="{% static 'forms/css/main.css' %}">
+    {% block link %}{% endblock %}
+    {% block style %}{% endblock %}
 </head>
 <body>
-    
+    <div class="form-container">
+        {% block content %}
+        {% endblock %}
+    </div>
 </body>
 </html>
