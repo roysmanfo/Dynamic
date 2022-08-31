@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+/* General style rules */
+body,html{
+    min-height: 100vh;
+    margin: 0;
+}
+body{
+    background-color: #fdfdfd;
+    font-family: 'Comfortaa', cursive;
+}
+
+.form-container{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(45deg, red, purple);
+}
+.form-container h1{
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #fff5;
+    text-align: center;
+    margin: 0;
+    top: 5%;
+    left: 5%;
+    transform: rotateZ(346deg);
+    font-size: 9rem;
+    position: absolute;
+}
+.form-container form{
+    display: flex;
+    min-width: 30vw;
+    width: max-content;
+    max-width: 70vw;
+    flex-direction: column;
+    margin: auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    backdrop-filter: blur(1px);
+    box-shadow: 0 0 50px #2229;
+}
+.form-container .form-title{
+    color: #4169e1;
+    text-transform: uppercase;
+    font-weight: 100;
+    text-align: center;
+}
+.form-container input{
+    background: #fff;
+    border: none;
+    border-bottom: solid 1px #aaa;
+    padding: 5px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    outline: none;
+}
+.form-container input:focus,
+.form-container input:active{
+    background: #ccc;
+}
+.form-container button{
+    outline: none;
+    border: none;
+    background: linear-gradient(45deg, red, purple, red);
+    background-size: 200% 100%;
+    background-position-x: left;
+    padding: 10px 2rem;
+    border-radius: 3px;
+    color: #fff9;
+    font-family: inherit;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 250ms;
+}
+.form-container button:hover,
+.form-container button:focus,
+.form-container button:focus-within{
+    background-position-x: right;
+}
+
+.form-container p{display: flex;flex-direction: column;margin: 0 0 1rem 0;}
+.form-container ul{display: none;list-style: none;padding: 0;color: #999;}
+
+.form-container a{
+    background-image: linear-gradient(45deg, #ff0000, #740074);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    text-decoration: none;
+    color: transparent;
+    font-weight: 600;
+}
+.form-container a:hover,
+.form-container a:focus{
+    background-image: linear-gradient(45deg, purple, purple);
+}
