@@ -16,17 +16,22 @@ body{
     width: 100vw;
     background: linear-gradient(45deg, red, purple);
 }
+@keyframes translate {
+    from {top: -5%; left: 15%;}
+    to {top: 5%; left: 5%; }
+}
 .form-container h1{
     font-weight: 100;
     text-transform: uppercase;
     color: #fff5;
     text-align: center;
     margin: 0;
-    top: 5%;
-    left: 5%;
+    top: -5%;
+    left: 15%;
     transform: rotateZ(340deg);
     font-size: 9rem;
     position: absolute;
+    animation: translate 3s forwards 1;
 }
 .form-container form{
     display: flex;
