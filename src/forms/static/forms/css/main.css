@@ -17,6 +17,7 @@ body{
     min-height: 100vh;
     width: 100vw;
     background: linear-gradient(45deg, red, purple);
+    isolation: isolate;
 }
 @media screen and (max-width: 300px) {
     .form-container{padding-block: 10px;}
