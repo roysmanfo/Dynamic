@@ -3,6 +3,7 @@
 body,html{
     min-height: 100vh;
     margin: 0;
+    overflow-x: hidden;
 }
 body{
     background-color: #fdfdfd;
@@ -10,12 +11,17 @@ body{
 }
 
 .form-container{
+    position: relative;
     display: grid;
     place-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background: linear-gradient(45deg, red, purple);
 }
+@media screen and (max-width: 300px) {
+    .form-container{padding-block: 10px;}
+}
+
 @keyframes translate {
     from {top: -5%; left: 15%;}
     to {top: 5%; left: 5%; }
@@ -86,7 +92,7 @@ body{
 }
 
 .form-container p{display: flex;flex-direction: column;margin: 0 0 1rem 0;}
-.form-container ul{display: none;list-style: none;padding: 0;color: #999;}
+.form-container ul{display: none;list-style: none;padding: 0;color: #999;font-size: .7rem;}
 
 .form-container a{
     background-image: linear-gradient(45deg, #ff0000, #740074);
