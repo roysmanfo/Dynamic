@@ -15,7 +15,7 @@
     
     {% csrf_token %}
     {{ form.as_p }}
-    <p class="last-message" style="display: block;">Already have an account, login <a href="{% url 'forms:login' %}">here</a></p>
+    <p class="last-message" style="display: block;">If you already have an account, you can just <a href="{% url 'forms:login' %}">login</a></p>
     <button>Register</button>
 </form>
 
