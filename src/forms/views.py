@@ -1,6 +1,21 @@
 from django.shortcuts import render
+from django.views import generic
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
 
 # Create your views here.
+
+class UserRegistrationView(generic.CreateView):
+    form_class = UserCreationForm
+    template_name = 'registration/register.html'
+    success_url = reverse_lazy('login')
+
+
+class UserLoginView(generic.CreateView):
+    template_name = 'registration/login.html'
+    success_url = reverse_lazy('login')
+
+
 def login(request):
     return render(request, 'login.html')
 
@@ -16,5 +31,5 @@ def password_changed(request):
 def reset_password(request, user_id):
     return render(request, 'reset_password.html')
 
-def sign_in(request):
-    return render(request, 'sign_in.html')
+# def sign_in(request):
+#     return render(request, 'sign_in.html')
