@@ -92,7 +92,8 @@ body{
 }
 
 .form-container p{display: flex;flex-direction: column;margin: 0 0 1rem 0;}
-.form-container ul{display: none;list-style: none;padding: 0;color: #999;font-size: .7rem;}
+.form-container ul:not(.errorlist){display: none;list-style: none;padding: 0;color: #999;font-size: .7rem;}
+.errorlist{display: none;list-style: none;padding: 0;color: #d12e2e;font-size: .7rem;}
 
 .form-container a{
     background-image: linear-gradient(45deg, #ff0000, #740074);
