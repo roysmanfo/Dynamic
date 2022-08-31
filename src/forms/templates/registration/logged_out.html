@@ -6,19 +6,32 @@
 {% endblock %}
 {% block style %}
     <style>
-        .last-message{text-align: center;padding-top: 1rem;}
+        a, button{width: 100%;}
+        div{
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            min-width: 30vw;
+            width: max-content;
+            max-width: 70vw;
+        }
     </style>
 {% endblock %}
 
+{% block bodytag %}
+<body class="form-container">
+{% endblock %}
+
+{% block divclass %}{% endblock %}
+
 {% block content %}
 <h1>Logout</h1>
-    <form action="" method="post">
+    <div action="" method="post">
         {% if user.is_authenticated %}
-            <h3 style="text-align: center;">You are already logged as {{ user.username }}</h3><br>
+            <h3 style="text-align: center;">You are still logged as {{ user.username }}</h3><br>
+        {% else %}
+            <h3 style="text-align: center;">You are logged out</h3>
         {% endif %}
-        {% csrf_token %}
-        {{ form.as_p }}
-        <p class="last-message" style="display: block;">If you don't have an account, just <a href="{% url 'forms:register' %}">sign in</a></p>
-        <button>Logged Out</button>
-    </form>
+        <a href="/"><button>Go to the homepage</button></a>
+    </div>
 {% endblock %}

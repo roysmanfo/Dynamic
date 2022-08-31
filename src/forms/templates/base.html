@@ -11,8 +11,11 @@
     {% block link %}{% endblock %}
     {% block style %}{% endblock %}
 </head>
+{% block bodytag %}
 <body>
-    <div class="form-container">
+{% endblock %}
+
+    <div {% block divclass %} class="form-container" {% endblock %}>
         {% block content %}
         {% endblock %}
     </div>

@@ -7,7 +7,7 @@ body,html{
 }
 body{
     background-color: #fdfdfd;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .form-container{
@@ -37,7 +37,8 @@ body{
     transform: rotateZ(340deg);
     font-size: 9rem;
     position: absolute;
-    animation: translate 3s forwards 1;
+    animation: translate 3s forwards 500ms;
+    z-index: -1;
 }
 .form-container form{
     display: flex;
