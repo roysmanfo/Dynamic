@@ -26,7 +26,7 @@
 
 {% block content %}
 <h1>Logout</h1>
-    <div action="" method="post">
+    <div>
         {% if user.is_authenticated %}
             <h3 style="text-align: center;">You are still logged as {{ user.username }}</h3><br>
         {% else %}
