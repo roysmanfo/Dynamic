@@ -19,8 +19,8 @@
         </ul>
         </div>
         <div>
-            <button class="login">Login</button>
-            <button class="sign-in">Sign up</button>
+            <a href="{% url 'forms:login' %}"><button class="login">Login</button></a>
+            <a href="{% url 'forms:register' %}"><button class="sign-in">Sign up</button></a>
         </div>
     </nav>
     
