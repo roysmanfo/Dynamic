@@ -1,0 +1,27 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+
+{% block title %}<title>Sign In • Dynamic</title>{% endblock %}
+{% block style %}
+    <style>
+        .last-message{text-align: center;padding-top: 1rem;}
+    </style>
+{% endblock %}
+
+{% block content %}
+<h1>Sign In</h1>
+<form action="" method="post">
+    
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p class="last-message" style="display: block;">If you already have an account, you can just <a href="{% url 'forms:login' %}">login</a></p>
+    <button>Register</button>
+</form>
+
+<script>
+    const UL = document.querySelector("ul");
+    function show_req(){UL.style.display="block";}
+    document.querySelector("input#id_password1").addEventListener("click",show_req);
+    document.querySelector("input#id_password1").addEventListener("focus",show_req);
+</script>
+{% endblock %}
