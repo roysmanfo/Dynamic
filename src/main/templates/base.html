@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellcome on Dynamic</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="{% static 'main/img/Dynamic_logo_A.png' %}" alt="Dynamic logo" class="logo">
+        <ul>
+            <li>How to start</li>
+            <li>Docs</li>
+            <li>Services</li>
+        </ul>
+        </div>
+        <div>
+            {% if user.is_authenticated %}
+                <div class="profile" id="profile"></div>
+                <ul class="dropdownMenu" id="navbar-dropdown-menu">
+                    <li><a href="">Profile</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            {% else %}
+            <a href="{% url 'forms:login' %}"><button class="login">Login</button></a>
+            <a href="{% url 'forms:register' %}"><button class="sign-in">Sign up</button></a>
+            {% endif %}
+        </div>
+    </nav>
+    {% if user.is_authenticated %}
+        {% block header %}{% endblock %}
+        {% block main %}{% endblock %}
+    {% else %}
+        {% block non-auth-header %}{% endblock %}
+        {% block non-auth-main %}{% endblock %} 
+    {% endif %}
+    <script src="{% static 'main/js/navbar.js' %}"></script>
+</body>
+</html>
