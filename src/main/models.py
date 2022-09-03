@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
 
-class UserDetails(models.Models):
+class UserDetails(models.Model):
     """
     UserDetails is an extension of the django.contrib.auth.models.User model.\n
     Contains additional information for the User model
