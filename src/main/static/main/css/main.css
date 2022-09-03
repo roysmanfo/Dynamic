@@ -18,6 +18,8 @@ nav{
     backdrop-filter: blur(1px);
 }
 
+/* Navbar */
+
 .logo{
     width: 10rem;
 }
@@ -44,6 +46,49 @@ nav button{border-radius: 5px;
 .login:hover{color: #fff;background: #4169e1;}
 .sign-in{background: #89e4a2;color: #fff;}
 .sign-in:hover{background: #50d172;}
+
+.profile{
+    height: 2rem;
+    aspect-ratio: 1/1;
+    background: #aaa;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.dropdownMenu{
+    width: max-content;
+    display: block;
+    list-style: none;
+    padding: 0;
+    position: fixed;
+    right: -100%;
+    top: 71.19px;
+    margin: 0;
+    background: #ddd;
+    transition: 0.5s;
+}
+.dropdownMenu li {
+    padding: 1.2rem 3rem;
+    display: inline;
+    display: flex;
+    align-items: center;
+    transition: 250ms;
+}
+.dropdownMenu a {color:#222;text-decoration: none;}
+.dropdownMenu li:hover {
+    cursor: pointer;
+    color: #b83dba;
+    background: #bbb;
+}
+.dropdownMenu > li > div {
+    height: 1rem;
+    width: 1rem;
+    border: solid #fff 1px;
+    border-radius: 30%;
+    margin-right: 10px;
+}
+.show {
+    right: 0;
+}
 
 /* Hero */
 
