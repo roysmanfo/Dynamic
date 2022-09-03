@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block header %}
+{% block non-auth-header %}
     <header class="hero">
         <div class="filter"></div>
         <img src="{% static 'main/img/hero_bg.jpg' %}" alt="colorfull background" class="bg">
@@ -17,7 +17,7 @@
     </header>
 {% endblock %}
 
-{% block main %}
+{% block non-auth-main %}
     <main>
         <section class="card-container">
             <div class="card">
@@ -44,4 +44,8 @@
         </section>
     </main>
     <script src="{% static 'main/js/animation.js' %}"></script>
+{% endblock %}
+
+{% block main %}
+    <p style="padding-top: 5rem;margin: 0;">you are authenticated as {{ user.username }}</p>
 {% endblock %}
