@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
+{% block title %}
+    {% if user.is_authenticated %}
+        {% if user.first_name %}
+        Dashboard • {{ user.first_name.capitalize }}
+        {% else %}
+        Dashboard • {{user.username.capitalize}}
+        {% endif %}
+    {% endif %}
+{% endblock %}
+
 {% block non-auth-header %}
     <header class="hero">
         <div class="filter"></div>
