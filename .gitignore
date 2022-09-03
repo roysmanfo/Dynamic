@@ -1,6 +1,9 @@
 #Secret key
 key.py
 
+# Migrations
+migrations/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
