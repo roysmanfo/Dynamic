@@ -1,16 +1,26 @@
 @import url('colors.css');
+/* General purpose classes */
+
+.bg-red             {background-color: var(--red-1);}
+.bg-orange          {background-color: var(--orange-1);}
+.bg-yellow          {background-color: var(--yellow-1);}
+.bg-green           {background-color: var(--green-1);}
+.bg-blue            {background-color: var(--blue-1);}
+.bg-purple          {background-color: var(--purple-1);}
+.bg-pink            {background-color: var(--pink-1);}
+.bg-gray            {background-color: var(--gray-2);}
 
 /* Text related classes */
-.txt-left{text-align: left;}
-.txt-center{text-align: center;}
-.txt-right{text-align: right;}
-.txt-justify{text-align: justify;}
+.txt-left           {text-align: left;}
+.txt-center         {text-align: center;}
+.txt-right          {text-align: right;}
+.txt-justify        {text-align: justify;}
 
-.col-red{color: var(--red-1);}
-.col-orange{color: var(--orange-1);}
-.col-yellow{color: var(--yellow-1);}
-.col-green{color: var(--green-1);}
-.col-blue{color: var(--blue-1);}
-.col-purple{color: var(--purple-1);}
-.col-pink{color: var(--pink-1);}
-.col-gray{color: var(--gray-2);}
+.col-red            {color: var(--red-1);}
+.col-orange         {color: var(--orange-1);}
+.col-yellow         {color: var(--yellow-1);}
+.col-green          {color: var(--green-1);}
+.col-blue           {color: var(--blue-1);}
+.col-purple         {color: var(--purple-1);}
+.col-pink           {color: var(--pink-1);}
+.col-gray           {color: var(--gray-2);}
