@@ -1,0 +1,8 @@
+.sidebar{
+    box-shadow: 0 10px 10px #aaa;
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    margin-top: 71.19px;
+    padding: 1rem;
+}

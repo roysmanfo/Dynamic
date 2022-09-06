@@ -12,6 +12,10 @@
     {% endif %}
 {% endblock %}
 
+{% block links %}
+<link rel="stylesheet" href="{% static 'main/css/dashboard.css' %}">
+{% endblock %}
+
 {% block non-auth-header %}
     <header class="hero">
         <div class="filter"></div>
@@ -58,5 +62,14 @@
 {% endblock %}
 
 {% block main %}
-    <p style="padding-top: 5rem;margin: 0;">you are authenticated as {{ user.username }}</p>
+    <aside class="sidebar">
+        <h1>Dashboard</h1>
+    </aside>
+
+    <!--
+    Spotify player
+    
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    -->
 {% endblock %}
