@@ -8,6 +8,8 @@ body{
     background-color: #fdfdfd;
     font-family: 'Comfortaa', cursive;
 }
+
+/* Navbar */
 nav{
     display: flex;
     justify-content: space-between;
@@ -16,10 +18,8 @@ nav{
     width: 100vw;
     background-color: #fffc;
     backdrop-filter: blur(1px);
+    z-index: 9999 !important;
 }
-
-/* Navbar */
-
 .logo{
     width: 10rem;
 }
@@ -33,7 +33,7 @@ nav>div>ul li{
     padding: 0 1rem;
     transition: 150ms;
 }
-nav>div>ul>li:hover{color: #89e4a2;cursor: pointer;}
+nav>div>ul>li:hover{color: #4169e1;cursor: pointer;}
 nav button{border-radius: 5px;
     border: none;
     padding: 1rem 2rem;
@@ -63,7 +63,7 @@ nav button{border-radius: 5px;
     right: -100%;
     top: 71.19px;
     margin: 0;
-    background: #ddd;
+    background: #ddd9;
     transition: 0.5s;
 }
 .dropdownMenu li {
@@ -76,8 +76,7 @@ nav button{border-radius: 5px;
 .dropdownMenu a {color:#222;text-decoration: none;}
 .dropdownMenu li:hover {
     cursor: pointer;
-    color: #b83dba;
-    background: #bbb;
+    background: #ddd5;
 }
 .dropdownMenu > li > div {
     height: 1rem;
