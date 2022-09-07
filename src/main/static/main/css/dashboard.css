@@ -7,10 +7,69 @@
     height: 100%;
     min-height: calc(100vh - 71.19px);
 }
+
+/* Sidebar related stuff */
+
 .sidebar{
     box-shadow: 0 10px 10px #aaa;
     height: 100%;
+    position: relative;
 }
+
+
+.music-player-wrapper{
+    width: 20%;
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: var(--gray-3);
+    display: flex;
+}
+.music-player-img{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background: var(--gray-1);
+    position: relative;
+}
+.music-player{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100%;
+    width: 100%;
+}
+.music-player-timer{
+    height: 3px;
+    width: calc(100% - 1rem);
+    margin: auto;
+    background: var(--gray-1);
+    border-radius: 50px;
+    position: relative;
+}
+.music-player-timer>div{
+    height: 100%;
+    background: linear-gradient(to right, var(--red-1), var(--purple-1));
+    width: 20%;
+    position: relative;
+}
+.music-player-timer>div::before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    aspect-ratio: 1/1;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 0;
+    background: rgb(175 49 175);
+    border-radius: 50%;
+}
+.music-player-controller{display: flex;justify-content: space-evenly;}
+.music-player-controller span{font-size: 2rem;color: #fff;}
+
+
+/* Task related stuff */
+
 .content{
     height: 100%;
     background-image: linear-gradient(45deg, rgb(255, 0, 0), rgb(128, 0, 128));
