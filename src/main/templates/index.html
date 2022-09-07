@@ -84,7 +84,7 @@
         <img src="{% static 'main/img/Dynamic_logo_A.png' %}" alt="Dynamic background logo" class="bg-logo" draggable="false"/>
         {% if Lists %}
             {% for list in Lists %}
-                <div class="tasklist">
+                <div class="tasklist {{ list.color.lower }}">
                     {% if Tasks %}
                     <h1 class="tasklist-name">{{ list.name }}</h1>
                         {% for task in Tasks %}

@@ -39,6 +39,7 @@ class TaskList(models.Model):
     id = models.CharField(max_length=30, default=create_id, unique=True, primary_key=True, editable=False)
     name = models.CharField(max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    color = models.CharField(max_length=20, choices=Colors.COLORS, blank=True, null=True, default='')
 
     def __str__(self):
         return self.name
