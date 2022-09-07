@@ -26,3 +26,23 @@
     transform: translateY(-50%);
     z-index: -1;
 }
+
+.tasklist{
+    background: #fff9;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.tasklist-name{
+    border-bottom: solid 2px #555;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+.task{
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px
+}
+.task-title{
+    margin: .5rem;
+}
