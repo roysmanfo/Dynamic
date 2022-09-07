@@ -14,6 +14,7 @@
 
 {% block links %}
 <link rel="stylesheet" href="{% static 'main/css/dashboard.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/tags.css' %}">
 {% endblock %}
 
 {% block non-auth-header %}
@@ -88,13 +89,13 @@
                     <h1 class="tasklist-name">{{ list.name }}</h1>
                         {% for task in Tasks %}
                             {% if task.parent_list.name == list.name %}
-                            <div class="task">
+                            <div class="task {{ task.color.lower }}">
                                 <h1 class="task-title"> {{ task.title }}</h1>
                             </div>
-                            {% else %}
-                                Niente
                             {% endif %}
                         {% endfor %}
+                    {% else %}
+                    <h1>No tasks found for this list</h1>
                     {% endif %}
                 </div>
                 
