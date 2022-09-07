@@ -5,9 +5,9 @@
 {% block title %}
     {% if user.is_authenticated %}
         {% if user.first_name %}
-        Dashboard • {{ user.first_name.capitalize }}
+        Dashboard · {{ user.first_name.capitalize }}
         {% else %}
-        Dashboard • {{user.username.capitalize}}
+        Dashboard · {{user.username.capitalize}}
         {% endif %}
     {% endif %}
 {% endblock %}
