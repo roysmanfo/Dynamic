@@ -15,6 +15,17 @@
     height: 100%;
     position: relative;
 }
+.create-btn{
+    border: none;
+    background: #cdcdcd;
+    margin: 1rem;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 50px;
+    position: relative;
+    font-family: inherit;
+    width: calc(100% - 2rem);
+}
 
 
 .music-player-wrapper{
