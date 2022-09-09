@@ -28,7 +28,23 @@
     position: relative;
     font-family: inherit;
     width: calc(100% - 2rem);
+    cursor: pointer;
 }
+.create-btn:where(:hover, :active, :focus){box-shadow: 0 0 20px -5px #000;}
+.create-menu{
+    display: none;
+    list-style: none;
+    padding: 0;
+    background: #dedede;
+}
+.show-options{display: block;}
+.create-menu li{padding: 1rem;}
+.create-menu li:where(:hover, :focus){background-color: #ccc;}
+
+
+
+
+
 
 
 .music-player-wrapper{

@@ -66,6 +66,11 @@
 <section class="container">
     <aside class="sidebar">
         <button class="create-btn" id="create-btn">Create</button>
+        <ul class="create-menu" id="create-menu">
+            <li>New Task</li>
+            <li>New List</li>
+        </ul>
+
 
         <div class="music-player-wrapper">
             <div class="music-player-img"></div>
@@ -105,7 +110,13 @@
         {% endif %}
     </section>
 </section>
-    
+    <script>
+        const createBtn = document.getElementById("create-btn");
+        createBtn.addEventListener("click", () => {
+            const options = document.getElementById("create-menu");
+            options.classList.contains("show-options") ? options.classList.remove("show-options") : options.classList.add("show-options");
+        })
+    </script>
 
     <!--
     Spotify player
