@@ -8,7 +8,9 @@ body{
     background-color: #fdfdfd;
     font-family: 'Comfortaa', 'Segoe Ui', sans-serif;
 }
-
+::-webkit-scrollbar-track{background: #eee;}
+::-webkit-scrollbar-thumb{background: #666;}
+::-webkit-scrollbar{width: 1rem;}
 /* Navbar */
 nav{
     display: flex;
@@ -17,7 +19,7 @@ nav{
     position: fixed;
     width: 100vw;
     background-color: #fffc;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(10px);
     z-index: 9999 !important;
 }
 .logo{

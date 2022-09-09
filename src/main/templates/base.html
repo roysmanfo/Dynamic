@@ -8,14 +8,22 @@
     <title>{% block title %}Wellcome on Dynamic{% endblock %}</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,0" />
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    
     {% block links %}{% endblock %}
-    <!-- General stylesheet files have more priority than ther imported css files -->
+    <!-- General stylesheet and mode files have more priority than ther imported css files -->
+    {% if user_details.theme == "dark" %}
+    <link rel="stylesheet" href="{% static 'main/css/darkmode.css' %}">
+    {% endif %}
     <link rel="stylesheet" href="{% static 'main/css/classes.css' %}" />
 </head>
 <body>
     <nav>
         <div>
+            {% if user_details.theme == "dark" %}
+            <img src="{% static 'main/img/Dynamic_logo_B.png' %}" alt="Dynamic logo" class="logo" draggable="false">
+            {% else %}
             <img src="{% static 'main/img/Dynamic_logo_A.png' %}" alt="Dynamic logo" class="logo" draggable="false">
+            {% endif %}
         <ul>
             <li>How to start</li>
             <li>Docs</li>
