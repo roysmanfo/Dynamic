@@ -1,0 +1,22 @@
+/* Darkmode style */
+body{background-color: #444;}
+nav{
+    box-shadow: 0 0 10px #0009;
+    background-color: #000c;
+    color: #fff;
+}
+::-webkit-scrollbar-track{background: #555;}
+::-webkit-scrollbar-thumb{background: #333;}
+
+/* Sidebar */
+
+.sidebar{
+    background-color: #444;
+}
+.create-btn{background-color: #343434;color: #fff;}
+
+/* Content */
+
+.tasklist{background: #0009;}
+.tasklist-name{color: #fff9;border-color: #fff3;}
+.task{background:#0005;color: #777;}

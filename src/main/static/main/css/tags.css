@@ -1,0 +1,18 @@
+
+.task.red                   {border-bottom: solid 1rem var(--red-1);}
+.task.orange                {border-bottom: solid 1rem var(--orange-1);}
+.task.yellow                {border-bottom: solid 1rem var(--orange-1);}
+.task.green                 {border-bottom: solid 1rem var(--green-1);}
+.task.blue                  {border-bottom: solid 1rem var(--blue-1);}
+.task.purple                {border-bottom: solid 1rem var(--purple-1);}
+.task.pink                  {border-bottom: solid 1rem var(--pink-2);}
+.task.gray                  {border-bottom: solid 1rem var(--gray-3);}
+
+.tasklist.red::before       {background-color: var(--red-1);}
+.tasklist.orange::before    {background-color: var(--orange-1);}
+.tasklist.yellow::before    {background-color: var(--orange-1);}
+.tasklist.green::before     {background-color: var(--green-1);}
+.tasklist.blue::before      {background-color: var(--blue-1);}
+.tasklist.purple::before    {background-color: var(--purple-1);}
+.tasklist.pink::before      {background-color: var(--pink-2);}
+.tasklist.gray:before       {background-color: var(--gray-3);}

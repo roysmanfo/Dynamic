@@ -1,6 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
+{% block title %}
+    {% if user.is_authenticated %}
+        {% if user.first_name %}
+        Dashboard · {{ user.first_name.capitalize }}
+        {% else %}
+        Dashboard · {{user.username.capitalize}}
+        {% endif %}
+    {% endif %}
+{% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'main/css/dashboard.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/tags.css' %}">
+{% endblock %}
+
 {% block non-auth-header %}
     <header class="hero">
         <div class="filter"></div>
@@ -28,7 +44,7 @@
                 </p>
             </div>
             <div class="card">
-                <h1>Personalize your experience</h1>
+                <h1>Customize your experience</h1>
                 <p>
                     You can give a bit of personality in everything you do, and we built this platform
                     with the goal of making task management as comfortable as possible, whatever settings you touch.
@@ -47,5 +63,65 @@
 {% endblock %}
 
 {% block main %}
-    <p style="padding-top: 5rem;margin: 0;">you are authenticated as {{ user.username }}</p>
+<section class="container">
+    <aside class="sidebar">
+        <button class="create-btn" id="create-btn">Create</button>
+        <ul class="create-menu" id="create-menu">
+            <li>New Task</li>
+            <li>New List</li>
+        </ul>
+
+
+        <div class="music-player-wrapper">
+            <div class="music-player-img"></div>
+            <div class="music-player">
+                <div class="music-player-title"></div>
+                <div class="music-player-timer"><div></div></div>
+                <div class="music-player-controller">
+                    <span class="material-symbols-outlined">skip_previous</span>
+                    <span class="material-symbols-outlined">play_arrow</span>
+                    <span class="material-symbols-outlined">skip_next</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <section class="content">
+        <img src="{% static 'main/img/Dynamic_logo_A.png' %}" alt="Dynamic background logo" class="bg-logo" draggable="false"/>
+        {% if Lists %}
+            {% for list in Lists %}
+                <div class="tasklist {{ list.color.lower }}">
+                    {% if Tasks %}
+                    <h1 class="tasklist-name">{{ list.name }}</h1>
+                        {% for task in Tasks %}
+                            {% if task.parent_list.name == list.name %}
+                            <div class="task {{ task.color.lower }}">
+                                <h1 class="task-title"> {{ task.title }}</h1>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                    <h1>No tasks found for this list</h1>
+                    {% endif %}
+                </div>
+                
+            {% endfor %}
+        {% else %}
+            <p>No Lists Found</p>
+        {% endif %}
+    </section>
+</section>
+    <script>
+        const createBtn = document.getElementById("create-btn");
+        createBtn.addEventListener("click", () => {
+            const options = document.getElementById("create-menu");
+            options.classList.contains("show-options") ? options.classList.remove("show-options") : options.classList.add("show-options");
+        })
+    </script>
+
+    <!--
+    Spotify player
+    
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    -->
 {% endblock %}

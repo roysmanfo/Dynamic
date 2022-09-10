@@ -1,0 +1,45 @@
+/* Color palettes */
+/* 
+*   _______    ___  ___
+*   |      \  |   \/   |
+*   |  |___/  |        |
+*   |  |  \   |  |\/|  |
+*   |__|\__\  |__|  |__|
+*   Yeah nerd, I signed it.
+*   If you wanna use these colors, mention me.
+*   It's a test, only cool people can pass it.
+*/
+
+:root{
+    --red-1: rgb(219, 52, 52);
+    --red-2: rgb(235, 28, 28);
+    --red-3: rgb(204, 0, 0);
+
+    --orange-1: rgb(255, 165, 0);
+    --orange-2: rgb(233, 114, 2);
+    --orange-3: rgb(255, 81, 0);
+
+    --yellow-1: rgb(255, 255, 1);
+    --yellow-2: rgb(228, 228, 11);
+    --yellow-3: rgb(197, 197, 0);
+
+    --green-1: rgb(84, 223, 84);
+    --green-2: rgb(46, 179, 46);
+    --green-3: rgb(19, 139, 45);
+    
+    --blue-1: rgb(65, 105, 225);
+    --blue-2: rgb(34, 34, 167);
+    --blue-3: rgb(15, 15, 105);
+
+    --purple-1: rgb(175, 49, 175);
+    --purple-2: rgb(143, 0, 143);
+    --purple-3: rgb(77, 0, 77);
+
+    --pink-1: rgb(253, 104, 253);
+    --pink-2: rgb(248, 68, 212);
+    --pink-3: rgb(218, 0, 131);
+
+    --gray-1: #d0d0d0;
+    --gray-2: #999;
+    --gray-3: #333;
+}
