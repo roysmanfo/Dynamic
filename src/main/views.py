@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import TaskList, Task
 from django.contrib.auth.models import AnonymousUser
+from .forms import CreateTask, CreateList
 # Create your views here.
 
 def home(request):
@@ -12,4 +13,8 @@ def home(request):
             }
         return render(request, 'dashboard.html', context)
     else:
-        return render(request, 'landing.html')
+        context = {
+            'ListsForm': CreateList,
+            'TasksForm': CreateTask,
+            }
+        return render(request, 'landing.html', context)
