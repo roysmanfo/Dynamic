@@ -11,15 +11,18 @@
     
     {% block links %}{% endblock %}
     <!-- General stylesheet and mode files have more priority than ther imported css files -->
-    {% if user and user_details.theme == "dark" %}
+    {% if user_details.theme == "dark" %}
     <link rel="stylesheet" href="{% static 'main/css/darkmode.css' %}">
     {% endif %}
     <link rel="stylesheet" href="{% static 'main/css/classes.css' %}" />
+
+    <!-- Additional style tags -->
+    {% block style %}{% endblock %}
 </head>
 <body>
     <nav>
         <div>
-            {% if user and user_details.theme == "dark" %}
+            {% if user_details.theme == "dark" %}
             <img src="{% static 'main/img/dynamic/logos/Dynamic_logo_C.png' %}" alt="Dynamic logo" class="logo" draggable="false">
             {% else %}
             <img src="{% static 'main/img/dynamic/logos/Dynamic_logo_D.png' %}" alt="Dynamic logo" class="logo" draggable="false">
@@ -31,7 +34,7 @@
         </ul>
         </div>
         <div>
-            {% if user and user.is_authenticated %}
+            {% if user.is_authenticated %}
                 <div class="profile" id="profile"></div>
                 <ul class="dropdownMenu" id="navbar-dropdown-menu">
                     <li><a href="">Profile</a></li>
@@ -43,13 +46,8 @@
             {% endif %}
         </div>
     </nav>
-    {% if user and user.is_authenticated %}
         {% block header %}{% endblock %}
         {% block main %}{% endblock %}
-    {% else %}
-        {% block non-auth-header %}{% endblock %}
-        {% block non-auth-main %}{% endblock %} 
-    {% endif %}
     <script src="{% static 'main/js/navbar.js' %}"></script>
 </body>
 </html>

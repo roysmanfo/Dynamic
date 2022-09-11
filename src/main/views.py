@@ -10,6 +10,6 @@ def home(request):
             'Lists':TaskList.objects.filter(user=request.user),
             'Tasks':Task.objects.filter(user=request.user),
             }
-        return render(request, 'index.html', context)
+        return render(request, 'dashboard.html', context)
     else:
-        return render(request, 'index.html')
+        return render(request, 'landing.html')

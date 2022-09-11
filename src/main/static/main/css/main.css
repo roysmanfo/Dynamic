@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+/* These style rules will get imported in every single page */
+
 /* General style rules */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 body,html{
     min-height: 100vh;
     margin: 0;
@@ -11,6 +13,7 @@ body{
 ::-webkit-scrollbar-track{background: #eee;}
 ::-webkit-scrollbar-thumb{background: #666;}
 ::-webkit-scrollbar{width: 1rem;}
+
 /* Navbar */
 nav{
     display: flex;
@@ -89,62 +92,4 @@ nav button{border-radius: 5px;
 }
 .show {
     right: 0;
-}
-
-/* Hero */
-
-.hero{
-    height: 100vh;
-    display: flex;
-    isolation: isolate;
-    position: relative;
-    background: linear-gradient(180deg, var(--blue-1), var(--purple-1));
-}
-.hero .bg{
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-}
-.hero .bg:first-of-type{bottom: 0;}
-.hero .bg:last-of-type{transform: translateY(99vh);}
-
-.hero>section{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-inline: 4rem;
-}
-
-.hero-caption h1{
-    font-size: 50px;
-    color: #fff9;
-}
-.hero-caption p{line-height: 2;color: #fff9;}
-
-/* Cards */
-
-.card-container{display: flex;padding: 2rem;}
-.card{
-    box-shadow: 0 0 30px #000a;
-    padding: 2rem;
-    margin: 1rem;
-    border-radius: 10px;
-    width: calc(33% - 6rem);
-    background: #fff;
-    opacity: 0;
-    transform: translateY(5rem);
-}
-.card h1{color: #4169e1;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
-@keyframes card {
-    to {transform: translateY(0);opacity: 1;height: auto;}
-}
-.fade-in-anim:nth-child(1){
-    animation: card 750ms forwards ease-in-out;
-}
-.fade-in-anim:nth-child(3){
-    animation: card 750ms forwards 400ms ease-in-out;
-}
-.fade-in-anim:nth-child(2){
-    animation: card 750ms forwards 800ms ease-in-out;
 }

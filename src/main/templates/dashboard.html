@@ -17,60 +17,6 @@
 <link rel="stylesheet" href="{% static 'main/css/tags.css' %}">
 {% endblock %}
 
-{% block non-auth-header %}
-<style>
-    nav{background: transparent; box-shadow: none;color: #fff;}
-    nav>div>ul>li:hover{color: var(--blue-3);}
-    .login{color: var(--blue-3);border: solid 1px var(--blue-3);background-color: transparent;transition: 250ms;}
-    .login:hover{background-color: var(--blue-3);}
-    .sign-in{background-color: var(--blue-2);transition: 250ms;}
-    .sign-in:hover{background-color: var(--blue-3);}
-    ::-webkit-scrollbar{display: none;}
-</style>
-    <header class="hero">
-        <img src="{% static 'main/img/svg/wave.svg' %}" alt="colorfull wavy background" class="bg">
-        <img src="{% static 'main/img/svg/wave2.svg' %}" alt="colorfull wavy background" class="bg">
-        <section class="hero-caption">
-            <h1>It's time to focus</h1>
-            <p>
-                It's time to focus and get productive, what better place for that than Dynamic?
-            </p>
-        </section>
-        <section class="hero-media">
-            <!-- Here goes an image or a gif of a task being used -->
-        </section>
-    </header>
-{% endblock %}
-
-{% block non-auth-main %}
-    <main>
-        <section class="card-container">
-            <div class="card">
-                <h1>Create a space</h1>
-                <p>
-                    A space here on Dynamic is like a virtual room disigned to bee as comfortable
-                    as possible for your needs.
-                </p>
-            </div>
-            <div class="card">
-                <h1>Customize your experience</h1>
-                <p>
-                    You can give a bit of personality in everything you do, and we built this platform
-                    with the goal of making task management as comfortable as possible, whatever settings you touch.
-                </p>
-            </div>
-            <div class="card">
-                <h1>We are open-source</h1>
-                <p>
-                    If you want, you can check our source code and contribute if you found a bug or want
-                    to propose a feature.
-                </p>
-            </div>
-        </section>
-    </main>
-    <script src="{% static 'main/js/animation.js' %}"></script>
-{% endblock %}
-
 {% block main %}
 <section class="container">
     <aside class="sidebar">
