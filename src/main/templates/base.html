@@ -23,9 +23,9 @@
     <nav>
         <div>
             {% if user_details.theme == "dark" %}
-            <img src="{% static 'main/img/dynamic/logos/Dynamic_logo_C.png' %}" alt="Dynamic logo" class="logo" draggable="false">
-            {% else %}
             <img src="{% static 'main/img/dynamic/logos/Dynamic_logo_D.png' %}" alt="Dynamic logo" class="logo" draggable="false">
+            {% else %}
+            <img src="{% static 'main/img/dynamic/logos/Dynamic_logo_C.png' %}" alt="Dynamic logo" class="logo" draggable="false">
             {% endif %}
         <ul>
             <li>How to start</li>
