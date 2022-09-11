@@ -133,7 +133,6 @@ nav button{border-radius: 5px;
     width: calc(33% - 6rem);
     background: #fff;
     opacity: 0;
-    height: 0;
     transform: translateY(5rem);
 }
 .card h1{color: #4169e1;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
