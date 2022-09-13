@@ -10,4 +10,6 @@ class CreateList(ModelForm):
     class Meta():
         model = TaskList
         fields = ('name', 'color')
-        
+        widgets = {
+            'name' : forms.TextInput({'placeholder':'Name'})
+        }        
