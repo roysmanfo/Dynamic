@@ -27,9 +27,10 @@
     font-family: inherit;
     width: calc(100% - 2rem);
     cursor: pointer;
+    box-shadow: 0 5px 5px -2px #666;
     transition: 500ms;
 }
-.create-btn:where(:hover){box-shadow: 0 0 20px -5px #000;}
+.create-btn:where(:hover){background: #aaa;}
 .create-menu{
     display: none;
     list-style: none;
