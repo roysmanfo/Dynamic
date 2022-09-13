@@ -165,7 +165,7 @@ body{overflow-x: hidden;}
 .create{
     position: absolute;
     right: -100%;
-    width: 30vw;
+    width: 25vw;
     background: #fff;
     display: flex;
     flex-direction: column;
