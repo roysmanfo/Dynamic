@@ -10,11 +10,9 @@ def home(request):
         context = {
             'Lists':TaskList.objects.filter(user=request.user),
             'Tasks':Task.objects.filter(user=request.user),
-            }
-        return render(request, 'dashboard.html', context)
-    else:
-        context = {
             'ListsForm': CreateList,
             'TasksForm': CreateTask,
             }
-        return render(request, 'landing.html', context)
+        return render(request, 'dashboard.html', context)
+    else:
+        return render(request, 'landing.html')
