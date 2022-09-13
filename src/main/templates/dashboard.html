@@ -68,10 +68,13 @@
         
     </section>
     <section class="create" style="right: 0;">
-        <h1 class="txt-center">Add a List</h1>
-        <form action="" method="post">
-            {{ ListsForm.as_p }}
-        </form>
+        <div id="CreateListForm" style="width: 100%;flex-grow: 1;display: flex; flex-direction: column;">
+            <h1 class="txt-center">Add a List</h1>
+            <form action="" method="post">
+                {{ ListsForm.as_p }}
+                <input type="submit" value="Create List" class="create-button">
+            </form>
+        </div>
     </section>
 </section>
     <script>
