@@ -41,28 +41,34 @@
         </div>
     </aside>
     <section class="content">
-        <img src="{% static 'main/img/Dynamic_logo_A.png' %}" alt="Dynamic background logo" class="bg-logo" draggable="false"/>
-        {% if Lists %}
-            {% for list in Lists %}
-                <div class="tasklist {{ list.color.lower }}">
-                    {% if Tasks %}
-                    <h1 class="tasklist-name">{{ list.name }}</h1>
-                        {% for task in Tasks %}
-                            {% if task.parent_list.name == list.name %}
-                            <div class="task {{ task.color.lower }}">
-                                <h1 class="task-title"> {{ task.title }}</h1>
-                            </div>
-                            {% endif %}
-                        {% endfor %}
-                    {% else %}
-                    <h1>No tasks found for this list</h1>
-                    {% endif %}
-                </div>
-                
-            {% endfor %}
-        {% else %}
-            <p>No Lists Found</p>
-        {% endif %}
+        <img src="{% static 'main/img/dynamic/logos/Dynamic_logo_A.png' %}" alt="Dynamic background logo" class="bg-logo" draggable="false"/>
+        <div class="dashboard-tasks">
+            {% if Lists %}
+                {% for list in Lists %}
+                    <div class="tasklist {{ list.color.lower }}">
+                        {% if Tasks %}
+                        <h1 class="tasklist-name">{{ list.name }}</h1>
+                            {% for task in Tasks %}
+                                {% if task.parent_list.name == list.name %}
+                                <div class="task {{ task.color.lower }}">
+                                    <h1 class="task-title"> {{ task.title }}</h1>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                        <h1>No tasks found for this list</h1>
+                        {% endif %}
+                    </div>
+                    
+                {% endfor %}
+            {% else %}
+                <h1 class="txt-center">No Lists Found</h1>
+            {% endif %}
+        </div>
+        
+    </section>
+    <section class="create">
+
     </section>
 </section>
     <script>
