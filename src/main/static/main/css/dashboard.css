@@ -165,6 +165,15 @@ body{overflow-x: hidden;}
 .create{
     position: absolute;
     right: -100%;
-    max-width: 30vw;
+    width: 30vw;
     background: #fff;
 }
+.create form{padding: 1rem;}
+.create form input,
+.create form select{
+    width: -webkit-fill-available;
+    width: -moz-fill-available;
+    font-family: inherit;
+    padding: 5px;
+}
+.create form label{display: none;}
