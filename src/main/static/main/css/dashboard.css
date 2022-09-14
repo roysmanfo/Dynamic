@@ -32,7 +32,7 @@ body{overflow-x: hidden;}
     box-shadow: 0 5px 5px -2px #666;
     transition: 500ms;
 }
-.create-btn:where(:hover){background: #aaa;}
+.create-btn:hover{background: #aaa;}
 .create-menu{
     display: none;
     list-style: none;
