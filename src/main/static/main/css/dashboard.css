@@ -186,8 +186,8 @@ body{overflow-x: hidden;}
 }
 .create-button{background: var(--gray-1);margin-top: auto;}
 .create-button:hover{background: var(--gray-2);cursor: pointer;}
-.create form input:focus,
-.create form select:focus {
+#CreateListForm input:focus,
+#CreateListForm select:focus {
     background: #eee;
 }
-.create form label{display: none;}
+#CreateListForm label{display: none;}
