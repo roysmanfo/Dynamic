@@ -193,5 +193,5 @@ body{overflow-x: hidden;}
 }
 #CreateListForm label{display: none;}
 
-.color-selector{display: flex;flex-wrap: wrap;gap: 1rem;justify-content: space-between;}
+.color-selector{display: grid;grid-template-columns: auto auto auto auto;grid-template-rows: auto auto;gap: 1rem;justify-items: stretch;}
 .color-selector div{height: 2rem;aspect-ratio: 1/1;border-radius: 5px;}
