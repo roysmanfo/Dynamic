@@ -184,6 +184,7 @@ body{overflow-x: hidden;}
     outline: none;
     transition: 250ms;
 }
+.create form select{display: none;}
 .create-button{background: var(--gray-1);margin-top: auto;}
 .create-button:hover{background: var(--gray-2);cursor: pointer;}
 #CreateListForm input:focus,
@@ -191,3 +192,6 @@ body{overflow-x: hidden;}
     background: #eee;
 }
 #CreateListForm label{display: none;}
+
+.color-selector{display: flex;flex-wrap: wrap;gap: 1rem;justify-content: center;}
+.color-selector div{height: 2rem;aspect-ratio: 1/1;border-radius: 5px;}
