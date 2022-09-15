@@ -30,14 +30,17 @@ for (let i = 0; i < ListColors.length; i++) {
         if (select[i+1].getAttribute("selected") == '') {
             select[i+1].removeAttribute("selected");
             select[0].setAttribute("selected","");
+            ListColors[i].classList.remove("selected");
             return;
         }
     
-        for (let i = 0; i < select.length; i++) {
-            const element = select[i];
-            element.removeAttribute("selected");
+        for (let j = 0; j < select.length; j++) {
+            select[j].removeAttribute("selected");
+            if (j!=0 && ListColors[j-1].classList.contains("selected"))
+                ListColors[j-1].classList.remove("selected");
         }
         select[i+1].setAttribute("selected","");
+        ListColors[i].classList.add("selected");
     })
 }
 
