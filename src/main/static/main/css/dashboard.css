@@ -125,7 +125,7 @@ body{overflow-x: hidden;}
 .dashboard-tasks{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
 }
 .tasklist{
@@ -163,13 +163,15 @@ body{overflow-x: hidden;}
     margin: .5rem;
 }
 .create{
-    position: absolute;
+    position: fixed;
     right: -100%;
     width: 25vw;
     background: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
+    top: 0;
+    padding-top: 71.19px;
 }
 .create form{padding: 1rem;display: flex;flex-direction: column;flex-grow: 1;}
 .create form input,
@@ -183,6 +185,7 @@ body{overflow-x: hidden;}
     border: solid #ccc 1px;
     outline: none;
     transition: 250ms;
+    font-size: 1rem;
 }
 .create form select{display: none;}
 .create-button{background: var(--gray-1);margin-top: auto;}
