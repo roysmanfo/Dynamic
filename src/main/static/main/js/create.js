@@ -17,19 +17,6 @@ const ListColors = [RedList, OrangeList, YellowList, GreenList, BlueList, Purple
 // gets selected and chhosed as the new list color
 const select = document.getElementById("id_color").children;
 
-function changeSelected(index){
-    if (select[index].getAttribute("selected")) {
-        select[0].setAttribute("selected")
-    }
-
-    select[index].setAttribute("selected","");
-
-    for (let i = 0; i < select.length; i++) {
-        const element = select[i];
-        element.removeAttribute("selected");
-    }
-}
-
 // For every button we manage the work under the hood and a visual feedback for the user 
 for (let i = 0; i < ListColors.length; i++) {
     const element = ListColors[i];
