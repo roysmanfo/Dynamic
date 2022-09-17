@@ -1,4 +1,4 @@
-// We could wra this whole code in a single function, but it will require more parameters and
+// We could wrap the whole color code section in a single function, but it will require more parameters and
 // make the code hard to refactor
 
 
@@ -81,3 +81,21 @@ for (let i = 0; i < TaskColors.length; i++) {
     })
 }
 
+
+
+// Here we modify the position of the create section
+
+function showSection(target);
+
+const CREATE_TASK_BUTTON = document.getElementById("create-task-btn");
+const CREATE_LIST_BUTTON = document.getElementById("create-task-btn");
+
+CREATE_TASK_BUTTON.addEventListener("click", showSection("task"));
+CREATE_LIST_BUTTON.addEventListener("click", showSection("list"));
+
+function showSection(target){
+    // target can be eather "task" or "list": "task" will open the section and show the CreateTaskForm
+    // and "list" will show the CreateListForm
+    
+    return;
+}
