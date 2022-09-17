@@ -5,6 +5,9 @@ class CreateTask(ModelForm):
     class Meta():
         model = Task
         fields = ('title', 'text', 'parent_list', 'due')
+        widgets = {
+            'due': forms.DateTimeInput({'type':'date'})
+        }
 
 class CreateList(ModelForm):
     class Meta():
