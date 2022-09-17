@@ -4,9 +4,10 @@ from .models import Task, TaskList
 class CreateTask(ModelForm):
     class Meta():
         model = Task
-        fields = ('title', 'text', 'parent_list', 'due')
+        fields = ('title', 'text', 'parent_list', 'due', 'color')
         widgets = {
-            'due': forms.DateTimeInput({'type':'date'})
+            'due': forms.DateTimeInput({'type':'date'}),
+            'color' : forms.Select({'id':'id_task_color'})
         }
 
 class CreateList(ModelForm):
