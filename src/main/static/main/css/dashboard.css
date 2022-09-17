@@ -190,6 +190,7 @@ body{overflow-x: hidden;}
 .create form select{display: none;}
 .create-button{background: var(--gray-1);margin-top: auto;}
 .create-button:hover{background: var(--gray-2);cursor: pointer;}
+.hiddenForm{display: none;}
 #CreateListForm input:focus,
 #CreateListForm select:focus {
     background: #eee;

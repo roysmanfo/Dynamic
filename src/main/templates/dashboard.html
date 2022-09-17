@@ -68,10 +68,28 @@
         
     </section>
     <section class="create" style="right: 0;">
-        <div id="CreateListForm" style="width: 100%;flex-grow: 1;display: flex; flex-direction: column;">
+        <div id="CreateListForm" class="hiddenForm" style="width: 100%;flex-grow: 1;display: flex; flex-direction: column;">
             <h1 class="txt-center">Add a List</h1>
             <form action="" method="post">
                 {{ ListsForm.as_p }}
+                <h2 class="txt-center">Color</h2>
+                <div class="color-selector">
+                    <div style="background: var(--red-1);" id="list-red"></div>
+                    <div style="background: var(--orange-1);" id="list-orange"></div>
+                    <div style="background: var(--yellow-1);" id="list-yellow"></div>
+                    <div style="background: var(--green-1);" id="list-green"></div>
+                    <div style="background: var(--blue-1);" id="list-blue"></div>
+                    <div style="background: var(--purple-1);" id="list-purple"></div>
+                    <div style="background: var(--pink-1);" id="list-pink"></div>
+                    <div style="background: var(--gray-1);" id="list-gray"></div>
+                </div>
+                <input type="submit" value="Create List" class="create-button">
+            </form>
+        </div>
+        <div id="CreateTaskForm" class="hiddenForm" style="width: 100%;flex-grow: 1;display: flex; flex-direction: column;">
+            <h1 class="txt-center">Add a List</h1>
+            <form action="" method="post">
+                {{ TasksForm.as_p }}
                 <h2 class="txt-center">Color</h2>
                 <div class="color-selector">
                     <div style="background: var(--red-1);" id="list-red"></div>
