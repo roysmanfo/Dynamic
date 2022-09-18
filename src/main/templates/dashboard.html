@@ -69,7 +69,13 @@
     </section>
     <section id="create-section" class="create">
         <div id="CreateListForm" class="hiddenForm" style="width: 100%;flex-grow: 1;display: flex; flex-direction: column;">
-            <h1 class="txt-center">Add a List</h1>
+            <div class="form-header">
+                <h1 class="txt-center">Add a List</h1>
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </div>
+            
             <form action="" method="post">
                 {{ ListsForm.as_p }}
                 <h2 class="txt-center">Color</h2>
@@ -87,7 +93,12 @@
             </form>
         </div>
         <div id="CreateTaskForm" class="hiddenForm" style="width: 100%;flex-grow: 1;display: flex; flex-direction: column;">
-            <h1 class="txt-center">Add a Task</h1>
+            <div class="form-header">
+                <h1 class="txt-center">Add a Task</h1>
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </div>
             <form action="" method="post">
                 {{ TasksForm.as_p }}
                 <h2 class="txt-center">Color</h2>

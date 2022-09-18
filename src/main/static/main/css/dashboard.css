@@ -175,6 +175,19 @@ body{overflow-x: hidden;}
     max-height: calc(100vh - 71.19px);
     height: calc(100vh - 71.19px);
 }
+.form-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 1rem;
+    padding-block: 1rem 0.5rem;
+}
+.form-header h1{margin: 0;}
+.form-header span{
+    font-size: 2.5rem !important;
+    cursor: pointer;
+}
+
 .create form{padding: 1rem;display: flex;flex-direction: column;flex-grow: 1;}
 .create form input,
 .create form select,
