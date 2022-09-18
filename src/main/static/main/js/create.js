@@ -112,3 +112,10 @@ const CREATE_LIST_BUTTON = document.getElementById("create-list-btn");
 CREATE_TASK_BUTTON.addEventListener("click", () => {showSection("task");});
 CREATE_LIST_BUTTON.addEventListener("click", () => {showSection("list");});
 
+const CLOSE_FORM_BTN = document.querySelectorAll(".form-header>.material-symbols-outlined");
+for (let i = 0; i < CLOSE_FORM_BTN.length; i++) {
+    CLOSE_FORM_BTN[i].addEventListener("click", () => {
+        const CREATE_SECTION = document.getElementById("create-section");
+        CREATE_SECTION.removeAttribute("style");
+    });
+}
