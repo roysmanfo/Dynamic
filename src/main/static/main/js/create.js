@@ -85,17 +85,22 @@ for (let i = 0; i < TaskColors.length; i++) {
 
 // Here we modify the position of the create section
 
-function showSection(target);
-
-const CREATE_TASK_BUTTON = document.getElementById("create-task-btn");
-const CREATE_LIST_BUTTON = document.getElementById("create-task-btn");
-
-CREATE_TASK_BUTTON.addEventListener("click", showSection("task"));
-CREATE_LIST_BUTTON.addEventListener("click", showSection("list"));
-
 function showSection(target){
     // target can be eather "task" or "list": "task" will open the section and show the CreateTaskForm
     // and "list" will show the CreateListForm
-    
-    return;
+
+    const CREATE_SECTION = document.getElementById("create-section");
+    if (CREATE_SECTION.hasAttribute("style") && CREATE_SECTION.getAttribute("style") == "right: 0%;"){
+        // Show form
+    }else{
+        CREATE_SECTION.setAttribute("style","right: 0%;");
+        showSection(target);
+    }
 }
+
+const CREATE_TASK_BUTTON = document.getElementById("create-task-btn");
+const CREATE_LIST_BUTTON = document.getElementById("create-list-btn");
+
+CREATE_TASK_BUTTON.addEventListener("click", () => {showSection("task");});
+CREATE_LIST_BUTTON.addEventListener("click", () => {showSection("list");});
+
