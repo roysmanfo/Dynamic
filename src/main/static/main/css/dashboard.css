@@ -199,6 +199,13 @@ body{overflow-x: hidden;}
     background: #eee;
 }
 #CreateListForm label, #CreateTaskForm p:last-of-type{display: none;}
+#CreateTaskForm label{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem 0;
+}
+#CreeateTaskForm p{display: flex;flex-direction: column;}
+#CreateTaskForm p:first-of-type label, #CreateTaskForm p:nth-of-type(2) label{display: none;}
 #CreateTaskForm{overflow-y: scroll;}
 select#id_parent_list{display: block;}
 .color-selector{display: grid;grid-template-columns: auto auto auto auto;grid-template-rows: auto auto;gap: 1rem;justify-items: stretch;}

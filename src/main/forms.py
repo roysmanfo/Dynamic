@@ -6,6 +6,8 @@ class CreateTask(ModelForm):
         model = Task
         fields = ('title', 'text', 'parent_list', 'due', 'color')
         widgets = {
+            'title': forms.TextInput({'placeholder':'Title'}),
+            'text' : forms.Textarea({'placeholder':'Notes'}),
             'due': forms.DateTimeInput({'type':'date'}),
             'color' : forms.Select({'id':'id_task_color'})
         }
