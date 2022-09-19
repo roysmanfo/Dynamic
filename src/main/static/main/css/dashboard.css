@@ -127,7 +127,9 @@ body{overflow-x: hidden;}
     flex-direction: column;
     align-items: stretch;
     width: 100%;
+    transition: inherit;
 }
+.dashboard-tasks.normalize{width: calc(100% - 25vw);}
 .tasklist{
     background: #fff9;
     margin: 1rem;

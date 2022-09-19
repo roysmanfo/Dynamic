@@ -102,6 +102,7 @@ function showSection(target){
         }
     }else{
         CREATE_SECTION.setAttribute("style","right: 0%;");
+        document.getElementById("dashboard-tasks").classList.add("normalize");
         showSection(target);
     }
 }
@@ -117,5 +118,6 @@ for (let i = 0; i < CLOSE_FORM_BTN.length; i++) {
     CLOSE_FORM_BTN[i].addEventListener("click", () => {
         const CREATE_SECTION = document.getElementById("create-section");
         CREATE_SECTION.removeAttribute("style");
+        document.getElementById("dashboard-tasks").classList.remove("normalize");
     });
 }

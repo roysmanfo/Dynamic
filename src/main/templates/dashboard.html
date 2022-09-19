@@ -42,7 +42,7 @@
     </aside>
     <section class="content">
         <img src="{% static 'main/img/dynamic/logos/Dynamic_logo_A.png' %}" alt="Dynamic background logo" class="bg-logo" draggable="false"/>
-        <div class="dashboard-tasks">
+        <div class="dashboard-tasks" id="dashboard-tasks">
             {% if Lists %}
                 {% for list in Lists %}
                     <div class="tasklist {{ list.color.lower }}">
