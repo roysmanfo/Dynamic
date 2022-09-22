@@ -128,17 +128,14 @@
             options.classList.contains("show-options") ? options.classList.remove("show-options") : options.classList.add("show-options");
         })
 
-        const UserId = document.getElementById("hidden_user_id");
-        const UserSelect = document.querySelectorAll("#id_user>option");
+        const UserId = document.getElementById("hidden_user_id").value;
+        const UserSelect = document.querySelectorAll("#id_user");
 
-        UserSelect.forEach(element => {
-            if (element.getAttribute("selected"))
-                element.removeAttribute("selected");
+        UserSelect.forEach(select => {
+            select[UserId].setAttribute("selected", "");
+            select[0].removeAttribute("selected");
         });
-        UserSelect.forEach(element => {
-            if (element.getAttribute("value") != '' && element.getAttribute("value") == UserId)
-                element.setAttribute("selected","");
-        });
+        
     </script>
 
     <!--
