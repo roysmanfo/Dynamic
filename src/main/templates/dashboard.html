@@ -68,6 +68,7 @@
         
     </section>
     <section id="create-section" class="create">
+        <input type="hidden" id="hidden_user_id" style="display: none;" value="{{ user.id }}">
         <div id="CreateListForm" class="hiddenForm" style="width: 100%;flex-grow: 1;display: flex; flex-direction: column;">
             <div class="form-header">
                 <h1 class="txt-center">Add a List</h1>
@@ -126,6 +127,18 @@
             const options = document.getElementById("create-menu");
             options.classList.contains("show-options") ? options.classList.remove("show-options") : options.classList.add("show-options");
         })
+
+        const UserId = document.getElementById("hidden_user_id");
+        const UserSelect = document.querySelectorAll("#id_user>option");
+
+        UserSelect.forEach(element => {
+            if (element.getAttribute("selected"))
+                element.removeAttribute("selected");
+        });
+        UserSelect.forEach(element => {
+            if (element.getAttribute("value") != '' && element.getAttribute("value") == UserId)
+                element.setAttribute("selected","");
+        });
     </script>
 
     <!--
