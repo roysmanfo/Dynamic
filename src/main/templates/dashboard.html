@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    {% if user and user.is_authenticated %}
+        {% if user.first_name %}
+        Dashboard · {{ user.first_name.capitalize }}
+        {% else %}
+        Dashboard · {{user.username.capitalize}}
+        {% endif %}
+    {% endif %}
+{% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'main/css/dashboard.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/tags.css' %}">
+{% endblock %}
+
+{% block main %}
+<section class="container">
+    <aside class="sidebar">
+        <button class="create-btn" id="create-btn">Create</button>
+        <ul class="create-menu" id="create-menu">
+            <li id="create-task-btn">New Task</li>
+            <li id="create-list-btn">New List</li>
+        </ul>
+
+
+        <div class="music-player-wrapper">
+            <div class="music-player-img"></div>
+            <div class="music-player">
+                <div class="music-player-title"></div>
+                <div class="music-player-timer"><div></div></div>
+                <div class="music-player-controller">
+                    <span class="material-symbols-outlined">skip_previous</span>
+                    <span class="material-symbols-outlined">play_arrow</span>
+                    <span class="material-symbols-outlined">skip_next</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <section class="content">
+        <img src="{% static 'main/img/dynamic/logos/Dynamic_logo_A.png' %}" alt="Dynamic background logo" class="bg-logo" draggable="false"/>
+        <div class="dashboard-tasks" id="dashboard-tasks">
+            {% if Lists %}
+                {% for list in Lists %}
+                    <div class="tasklist {{ list.color.lower }}">
+                        {% if Tasks %}
+                        <h1 class="tasklist-name">{{ list.name }}</h1>
+                            {% for task in Tasks %}
+                                {% if task.parent_list.name == list.name %}
+                                <div class="task {{ task.color.lower }}">
+                                    <h1 class="task-title"> {{ task.title }}</h1>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                        <h1>No tasks found for this list</h1>
+                        {% endif %}
+                    </div>
+                    
+                {% endfor %}
+            {% else %}
+                <h1 class="txt-center">No Lists Found</h1>
+            {% endif %}
+        </div>
+        
+    </section>
+    <section id="create-section" class="create">
+        <div id="CreateListForm" class="hiddenForm" style="width: 100%;flex-grow: 1;display: flex; flex-direction: column;">
+            <div class="form-header">
+                <h1 class="txt-center">Add a List</h1>
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </div>
+            
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ ListsForm.as_p }}
+                <h2 class="txt-center">Color</h2>
+                <div class="color-selector">
+                    <div style="background: var(--red-1);" id="list-red"></div>
+                    <div style="background: var(--orange-1);" id="list-orange"></div>
+                    <div style="background: var(--yellow-1);" id="list-yellow"></div>
+                    <div style="background: var(--green-1);" id="list-green"></div>
+                    <div style="background: var(--blue-1);" id="list-blue"></div>
+                    <div style="background: var(--purple-1);" id="list-purple"></div>
+                    <div style="background: var(--pink-1);" id="list-pink"></div>
+                    <div style="background: var(--gray-1);" id="list-gray"></div>
+                </div>
+                <input type="submit" value="Create List" class="create-button">
+            </form>
+        </div>
+        <div id="CreateTaskForm" class="hiddenForm" style="width: 100%;flex-grow: 1;display: flex; flex-direction: column;">
+            <div class="form-header">
+                <h1 class="txt-center">Add a Task</h1>
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </div>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ TasksForm.as_p }}
+                <h2 class="txt-center">Color</h2>
+                <div class="color-selector">
+                    <div style="background: var(--red-1);" id="task-red"></div>
+                    <div style="background: var(--orange-1);" id="task-orange"></div>
+                    <div style="background: var(--yellow-1);" id="task-yellow"></div>
+                    <div style="background: var(--green-1);" id="task-green"></div>
+                    <div style="background: var(--blue-1);" id="task-blue"></div>
+                    <div style="background: var(--purple-1);" id="task-purple"></div>
+                    <div style="background: var(--pink-1);" id="task-pink"></div>
+                    <div style="background: var(--gray-1);" id="task-gray"></div>
+                </div>
+                <input type="submit" value="Create Task" class="create-button" style="margin-top: 2rem;">
+            </form>
+        </div>
+    </section>
+</section>
+    <script src="{% static 'main/js/create.js' %}"></script>
+    <script>
+        const createBtn = document.getElementById("create-btn");
+        createBtn.addEventListener("click", () => {
+            const options = document.getElementById("create-menu");
+            options.classList.contains("show-options") ? options.classList.remove("show-options") : options.classList.add("show-options");
+        })
+    </script>
+
+    <!--
+    Spotify player
+    
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    -->
+{% endblock %}
