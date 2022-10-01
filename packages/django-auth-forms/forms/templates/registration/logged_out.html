@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Logout • Dynamic</title>
+{% endblock %}
+{% block style %}
+    <style>
+        a, button{width: 100%;}
+        div{
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            min-width: 30vw;
+            width: max-content;
+            max-width: 70vw;
+        }
+    </style>
+{% endblock %}
+
+{% block bodytag %}
+<body class="form-container">
+{% endblock %}
+
+{% block divclass %}style="box-shadow: 0 0 50px #2229;"{% endblock %}
+
+{% block content %}
+<h1>Logout</h1>
+    <div>
+        {% if user.is_authenticated %}
+            <h3 style="text-align: center;">You are still logged as {{ user.username }}</h3><br>
+        {% else %}
+            <h3 style="text-align: center;">You are logged out</h3>
+        {% endif %}
+        <a href="/"><button>Go to the homepage</button></a>
+    </div>
+{% endblock %}

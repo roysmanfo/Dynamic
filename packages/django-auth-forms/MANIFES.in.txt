@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+recursive-include forms/static *
+recursive-include forms/templates *
+recursive-include forms/templates/registration *
+recursive-include docs *
