@@ -1,4 +1,4 @@
-![](img/Dynamic_logo_B.png)
+![](img/Dynamic_presentation.png)
 <!-- green: #89e4a2 -->
 
 __Dynamic si not just a ToDo app__, Dynamic is a space for storing personal tasks, boost productivity, and focus in order to get work done.  
