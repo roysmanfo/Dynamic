@@ -51,7 +51,13 @@
                             {% for task in Tasks %}
                                 {% if task.parent_list.name == list.name %}
                                 <div class="task {{ task.color.lower }}">
-                                    <h1 class="task-title"> {{ task.title }}</h1>
+                                    <div class="task-content">
+                                        <h1 class="task-title"> {{ task.title }}</h1>
+                                        <p class="task-due">{{ task.due }}</p>
+                                    </div>
+                                    <span class="material-symbols-outlined task-edit">
+                                        edit_note
+                                    </span>
                                 </div>
                                 {% endif %}
                             {% endfor %}
