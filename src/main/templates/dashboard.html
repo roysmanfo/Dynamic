@@ -55,9 +55,12 @@
                                         <h1 class="task-title"> {{ task.title }}</h1>
                                         <p class="task-due">{{ task.due }}</p>
                                     </div>
-                                    <span class="material-symbols-outlined task-edit">
-                                        edit_note
-                                    </span>
+                                    <button class="task-edit" title="Edit task">
+                                        <span class="material-symbols-outlined">
+                                            edit_note
+                                        </span>
+                                    </button>
+                                    
                                 </div>
                                 {% endif %}
                             {% endfor %}
