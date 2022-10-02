@@ -19,20 +19,21 @@ body{overflow-x: hidden;}
     grid-area: sidebar;
 }
 .create-btn{
+    font-size: 1.1rem;
     border: none;
-    background: #cdcdcd;
+    background: #ddd;
     margin: 1rem;
     text-align: center;
-    padding: 1rem;
-    border-radius: 50px;
+    padding: 1.3rem 1rem;
+    border-radius: 10px;
     position: relative;
     font-family: inherit;
     width: calc(100% - 2rem);
     cursor: pointer;
-    box-shadow: 0 5px 5px -2px #666;
+    box-shadow: 0 5px 5px -2px #999;
     transition: 500ms;
 }
-.create-btn:hover{background: #aaa;}
+.create-btn:hover{background: #ccc;}
 .create-menu{
     display: none;
     list-style: none;
