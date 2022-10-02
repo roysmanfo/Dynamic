@@ -15,6 +15,8 @@ nav{
 }
 .create-btn{background-color: #343434;color: #fff;box-shadow: 0 5px 5px -2px #000;}
 .create-btn:hover{background: #222;}
+.create-menu li{background-color: #666;}
+.create-menu li:hover{background-color: #333;}
 
 /* Content */
 
@@ -22,10 +24,14 @@ nav{
 .tasklist-name{color: #fff9;border-color: #fff3;}
 .task{background:#0005;color: #777;}
 
+/* Task */
+.task-edit{color: #fff;}
 
 /* Create forms */
 .create{background: #444;color: #999;}
-.create form input{background: #333;color: #999;border: none;}
+.create form input,
+.create form select,
+.create form textarea{background: #333;color: #999;border: none;}
 #CreateListForm input:focus{
     background: #111;
 }

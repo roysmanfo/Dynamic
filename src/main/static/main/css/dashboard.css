@@ -181,7 +181,8 @@ body{overflow-x: hidden;}
 }
 .task-edit{
     margin-left: .5rem;
-    color: black;
+    color: inherit;
+    border-radius: 5px;
     font-size: 2rem;
     display: grid;
     place-items: center;
@@ -192,7 +193,7 @@ body{overflow-x: hidden;}
     cursor: pointer;
     transition: 250ms;
 }
-.task-edit span{margin: 0;font-size: inherit;}
+.task-edit span{margin: 0;font-size: inherit;padding: 5px;}
 .task-edit:where(:hover, :focus){opacity: 1;}
 .create{
     position: fixed;
