@@ -18,6 +18,14 @@
 <link rel="shortcut icon" href="{% static 'main/img/dynamic/logos/bee_productive.png' %}" type="image/x-icon">
 {% endblock %}
 
+{% block style %}
+    <style>
+        .content {
+            background-image: url("{% static 'main/img/dynamic/Dynamic_presentation.png' %}");
+        }
+    </style>
+{% endblock %}
+
 {% block main %}
 <section class="container">
     <aside class="sidebar">
@@ -49,7 +57,6 @@
         </div>
     </aside>
     <section class="content">
-        <img src="{% static 'main/img/dynamic/logos/Dynamic_logo_A.png' %}" alt="Dynamic background logo" class="bg-logo" draggable="false"/>
         <div class="dashboard-tasks" id="dashboard-tasks">
             {% if Lists %}
                 {% for list in Lists %}

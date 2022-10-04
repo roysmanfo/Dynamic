@@ -108,7 +108,9 @@ body{overflow-x: hidden;}
     max-width: calc(100vw - 20vw);
     min-width: calc(100vw - 20vw - 30vw);
     margin-left: 20vw;
-    background-image: linear-gradient(to top right, #4169e1, rgb(143 0 143));
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     isolation: isolate;
     grid-area: content;
