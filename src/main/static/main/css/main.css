@@ -68,7 +68,7 @@ nav button{border-radius: 5px;
     right: -100%;
     top: 71.19px;
     margin: 0;
-    background: #ddd9;
+    background: #eee;
     transition: 0.5s;
 }
 .dropdownMenu li {
@@ -81,7 +81,7 @@ nav button{border-radius: 5px;
 .dropdownMenu a {color:#222;text-decoration: none;}
 .dropdownMenu li:hover {
     cursor: pointer;
-    background: #ddd5;
+    background: #ddd;
 }
 .dropdownMenu > li > div {
     height: 1rem;
