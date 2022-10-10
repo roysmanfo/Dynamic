@@ -1,6 +1,9 @@
 #Secret key
 key.py
 
+# ignnore_me files
+ignore_me*.*
+
 # Migrations
 migrations/
 
@@ -66,6 +69,9 @@ coverage.xml
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+
+# Databases
+db.postgres
 
 # Flask stuff:
 instance/
