@@ -61,6 +61,7 @@
             {% if Lists %}
                 {% for list in Lists %}
                     <div class="tasklist {{ list.color.lower }}">
+                        <h1 class="tasklist-name">{{ list.name.upper }}</h1>
                         {% if Tasks %}
                         <h1 class="tasklist-name">{{ list.name }}</h1>
                             {% for task in Tasks %}
@@ -80,10 +81,9 @@
                                 {% endif %}
                             {% endfor %}
                         {% else %}
-                        <h1>No tasks found for this list</h1>
+                        <h1 style="margin-inline: 1rem;">No tasks found for this list</h1>
                         {% endif %}
                     </div>
-                    
                 {% endfor %}
             {% endif %}
         </div>
