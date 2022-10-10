@@ -1,6 +1,9 @@
 #Secret key
 key.py
 
+# ignore_me files
+ignore_me*.*
+
 # Migrations
 migrations/
 
