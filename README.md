@@ -12,7 +12,8 @@ We provide the basic "Save-Task-Do-Task" functionalities, but on top of that we 
 
 ## Current features
 
-__NOTE:__ `Dynamic is still in development and this isn't even an alpha version of Dynamic, this means that not all features programmed have been implemented yet.`
+__NOTE:__   
+`Dynamic is still in development and this isn't even an alpha version of Dynamic, this means that not all features have been implemented yet.`
 
 ### General Features
 - Organized dashboard for all your lists
