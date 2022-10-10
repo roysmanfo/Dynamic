@@ -4,9 +4,8 @@ import string, random
 
 # Utilities
 def create_id():
-    for _ in range(30):
-        pk = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(16))
-        return pk
+    pk = ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(24))
+    return pk
 
 class Colors():
     RED = 'Red'
