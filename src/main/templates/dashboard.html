@@ -63,7 +63,6 @@
                     <div class="tasklist {{ list.color.lower }}">
                         <h1 class="tasklist-name">{{ list.name.upper }}</h1>
                         {% if Tasks %}
-                        <h1 class="tasklist-name">{{ list.name }}</h1>
                             {% for task in Tasks %}
                                 {% if task.parent_list.name == list.name %}
                                 <div class="task {{ task.color.lower }}">
