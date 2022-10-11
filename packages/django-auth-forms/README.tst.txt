@@ -11,14 +11,14 @@ Detailed documentation is in the "docs" directory.
 Quick start
 -----------
 
-1. Add "formd" to your INSTALLED_APPS setting like this::
+1. Add "forms" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = [
         ...
         'forms',
     ]
 
-2. Include the polls URLconf in your project urls.py like this::
+2. Include the forms URLconf in your project urls.py like this::
 
     path('', include('forms.urls')),
 
