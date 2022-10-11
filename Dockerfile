@@ -1,11 +1,11 @@
 FROM python:3.10
 
+ENV PYTHONBUFFERED=1
+
 WORKDIR /app
 
-COPY * ./
+COPY requirements.txt .
 
-RUN pip install 
-
-COPY . .
+RUN pip install -r requirements.txt
 
 RUN ["py", "manage.py", "runserver"]
