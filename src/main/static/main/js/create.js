@@ -56,8 +56,10 @@ const GrayTask = document.getElementById("task-gray");
 
 const TaskColors = [RedTask, OrangeTask, YellowTask, GreenTask, BlueTask, PurpleTask, PinkTask, GrayTask]
 
-// Under the hood after clicking on a button, an element from the actual color select tag in the original form
-// gets selected and chhosed as the new task color
+/*
+ * Under the hood after clicking on a button, an element from the actual color select tag in the original form
+ * gets selected and chhosed as the new task color
+*/
 const SelectTaskColor = document.getElementById("id_task_color").children;
 
 // For every button we manage the work under the hood and a visual feedback for the user 
@@ -87,9 +89,12 @@ for (let i = 0; i < TaskColors.length; i++) {
 const TASK_FORM = document.getElementById("CreateTaskForm");
 const LIST_FORM = document.getElementById("CreateListForm");
 
+/**
+ * @param target can be eather "**task**" or "**list**": "task" will open the section and show the CreateTaskForm
+ * and "list" will show the CreateListForm
+*/
 function showSection(target){
-    // target can be eather "task" or "list": "task" will open the section and show the CreateTaskForm
-    // and "list" will show the CreateListForm
+    
 
     const CREATE_SECTION = document.getElementById("create-section");
     if (CREATE_SECTION.hasAttribute("style") && CREATE_SECTION.getAttribute("style") == "right: 0%;"){
