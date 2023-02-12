@@ -78,15 +78,10 @@ WSGI_APPLICATION = 'Dynamic.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': get_db_name(),
-        'USER': get_db_user(),
-        'PASSWORD': get_db_password(),
-        'HOST': get_db_host(),
-        'PORT': str(get_db_port()),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3', 
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
