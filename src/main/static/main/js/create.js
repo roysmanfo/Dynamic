@@ -5,16 +5,7 @@
 // List color buttons
 
 // Every list color button, accessing by id becouse it makes it easier to work with attributes
-const RedList = document.getElementById("list-red");
-const OrangeList = document.getElementById("list-orange");
-const YellowList = document.getElementById("list-yellow");
-const GreenList = document.getElementById("list-green");
-const BlueList = document.getElementById("list-blue");
-const PurpleList = document.getElementById("list-purple");
-const PinkList = document.getElementById("list-pink");
-const GrayList = document.getElementById("list-gray");
-
-const ListColors = [RedList, OrangeList, YellowList, GreenList, BlueList, PurpleList, PinkList, GrayList];
+const ListColors = document.querySelectorAll('.color-selector')[0].children;
 
 // Under the hood after clicking on a button, an element from the actual color select tag in the original form
 // gets selected and chhosed as the new list color
@@ -23,38 +14,33 @@ const SelectListColor = document.getElementById("id_color").children;
 // For every button we manage the work under the hood and a visual feedback for the user 
 for (let i = 0; i < ListColors.length; i++) {
     const element = ListColors[i];
+    const bg = ListColors[i].style.background.substring(4, ListColors[i].style.background.length - 2);
     element.addEventListener("click", () => {
         if (SelectListColor[i+1].getAttribute("selected") == '') {
             SelectListColor[i+1].removeAttribute("selected");
             SelectListColor[0].setAttribute("selected","");
-            ListColors[i].classList.remove("selected");
+            ListColors[i].setAttribute('style',`background: var(${bg}1);`);
             return;
         }
-    
-        for (let j = 0; j < SelectListColor.length; j++) {
+                
+        for (let j = 0; j < ListColors.length; j++) {
+            let nbg = ListColors[j].style.background.substring(4, ListColors[j].style.background.length - 2)
             SelectListColor[j].removeAttribute("selected");
-            if (j!=0 && ListColors[j-1].classList.contains("selected"))
-                ListColors[j-1].classList.remove("selected");
+            
+            if (ListColors[j].getAttribute('style').includes("border"))
+                ListColors[j].setAttribute('style',`background: var(${nbg}1);`);
+            
         }
+
+        
         SelectListColor[i+1].setAttribute("selected","");
-        ListColors[i].classList.add("selected");
+        ListColors[i].setAttribute('style',`background: var(${bg}1); border: solid 2px var(${bg}3);`);
     })
 }
 
 
 // Same thing with Tasks
-
-// Every list color button
-const RedTask = document.getElementById("task-red");
-const OrangeTask = document.getElementById("task-orange");
-const YellowTask = document.getElementById("task-yellow");
-const GreenTask = document.getElementById("task-green");
-const BlueTask = document.getElementById("task-blue");
-const PurpleTask = document.getElementById("task-purple");
-const PinkTask = document.getElementById("task-pink");
-const GrayTask = document.getElementById("task-gray");
-
-const TaskColors = [RedTask, OrangeTask, YellowTask, GreenTask, BlueTask, PurpleTask, PinkTask, GrayTask]
+const TaskColors = document.querySelectorAll('.color-selector')[1].children;
 
 // Under the hood after clicking on a button, an element from the actual color select tag in the original form
 // gets selected and chhosed as the new task color
