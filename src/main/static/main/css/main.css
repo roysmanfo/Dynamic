@@ -1,14 +1,17 @@
 /* These style rules will get imported in every single page */
 
 /* General style rules */
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body,html{
     min-height: 100vh;
     margin: 0;
 }
 body{
     background-color: #fdfdfd;
-    font-family: 'Comfortaa', 'Segoe Ui', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+button{
+    font-family: inherit;
 }
 ::-webkit-scrollbar-track{background: #eee;}
 ::-webkit-scrollbar-thumb{background: #666;}
@@ -36,9 +39,10 @@ nav>div>ul{
 }
 nav>div>ul li{
     padding: 0 1rem;
-    transition: 150ms;
+    transition: 250ms;
+    font-weight: 600;
 }
-nav>div>ul>li:hover{color: #4169e1;cursor: pointer;}
+nav>div>ul>li:hover{color: #2222a7;cursor: pointer;}
 nav button{border-radius: 5px;
     border: none;
     padding: 1rem 2rem;
