@@ -155,7 +155,6 @@ body{overflow-x: hidden;}
     border-radius: 5px 0 0  5px;
 }
 .tasklist-name{
-    color: #999;
     font-size: 2em;
     padding-bottom: 10px;
     text-transform: uppercase;
@@ -167,10 +166,15 @@ body{overflow-x: hidden;}
     border-radius: 5px;
     margin-inline: 1rem;
     box-shadow: 0 0 20px #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .task-title{
     margin: .5rem;
-    color: #999;
+}
+.due-date{
+    color: #bbb;
 }
 .create{
     position: fixed;

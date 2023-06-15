@@ -44,14 +44,17 @@
         <div class="dashboard-tasks" id="dashboard-tasks">
             {% if Lists %}
                 {% for list in Lists %}
-                    <div class="tasklist {{ list.color.lower }}">
+                    <div class="tasklist">
                         {% if Tasks %}
-                        <h1 class="tasklist-name">{{ list.name }}</h1>
+                        <h1 class="tasklist-name col-{{ list.color.lower }}-2">{{ list.name }}</h1>
                             {% for task in Tasks %}
                                 {% if task.parent_list.name == list.name %}
-                                <div class="task {{ task.color.lower }}">
+                                <div class="task col-{{ task.color.lower }}">
                                     <h1 class="task-title"> {{ task.title }}</h1>
-                                </div>
+                                    {% if task.due %}
+                                        <p class="due-date">{{ task.due }}</p>
+                                    {% endif %}
+                                    </div>
                                 {% endif %}
                             {% endfor %}
                         {% else %}
