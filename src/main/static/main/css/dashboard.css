@@ -39,7 +39,10 @@ body{overflow-x: hidden;}
     display: none;
     list-style: none;
     padding: 0;
-    background: #dedede;
+    background: #eeeeee;
+    color: var(--gray-2);
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 .show-options{display: block;}
 .create-menu li{padding: 1rem; cursor: pointer;}
@@ -190,6 +193,9 @@ body{overflow-x: hidden;}
     height: calc(100vh - 71.19px);
     transition: 250ms ease-in-out !important;
 }
+.create > div::-webkit-scrollbar{
+    display: none;
+}
 .form-header{
     display: flex;
     justify-content: space-between;
@@ -219,7 +225,15 @@ body{overflow-x: hidden;}
     font-size: 1rem;
 }
 .create form select{display: none;}
-.create-button{background: var(--gray-1);margin-top: auto;}
+.create-button{
+    background: #eeeeee;
+    border: none !important;
+    font-size: 1.5rem !important;
+    font-weight: 700;
+    color: var(--gray-2);
+    text-transform: uppercase;
+    margin-top: auto;
+}
 .create-button:hover{background: var(--gray-2);cursor: pointer;}
 .hiddenForm{display: none !important;}
 #CreateListForm input:focus,
