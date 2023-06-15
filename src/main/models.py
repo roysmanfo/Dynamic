@@ -3,10 +3,9 @@ from django.contrib.auth.models import User
 import string, random
 
 # Utilities
-def create_id():
-    for _ in range(30):
-        pk = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(16))
-        return pk
+def create_id():    
+    pk = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(16))
+    return pk
 
 class Colors():
     RED = 'Red'
