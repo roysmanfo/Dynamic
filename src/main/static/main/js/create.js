@@ -53,17 +53,17 @@ for (let i = 0; i < TaskColors.length; i++) {
         if (SelectTaskColor[i+1].getAttribute("selected") == '') {
             SelectTaskColor[i+1].removeAttribute("selected");
             SelectTaskColor[0].setAttribute("selected","");
-            TaskColors[i].classList.remove("selected");
+            TaskColors[i].setAttribute('style',`background: var(${bg}1);`);
             return;
         }
-    
-        for (let j = 0; j < SelectTaskColor.length; j++) {
+        
+        for (let j = 0; j < TaskColors.length; j++) {
+            let nbg = TaskColors[j].style.background.substring(4, TaskColors[j].style.background.length - 2)
             SelectTaskColor[j].removeAttribute("selected");
-            if (j!=0 && TaskColors[j-1].classList.contains("selected"))
-                TaskColors[j-1].classList.remove("selected");
+            if (TaskColors[j].getAttribute('style').includes("border"))
+                TaskColors[j].setAttribute('style',`background: var(${nbg}1);`);
         }
-        SelectTaskColor[i+1].setAttribute("selected","");
-        TaskColors[i].classList.add("selected");
+        TaskColors[i].setAttribute('style',`background: var(${bg}1); border: solid 2px var(${bg}3);`);
     })
 }
 
